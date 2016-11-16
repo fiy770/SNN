@@ -37,17 +37,18 @@ Vadap vadap gnd 1.2V
 Vthra vthra gnd 1.3v
 Valk valk gnd 0.2V
 *****noise_sup****
-MN1 vi4 vi4 gnd gnd nch w=4u l=0.2u m=1
-MN2 vi4 vn1 vdd vdd pch w=1u l=1u m=1
-Mn3 vn1 vn1 vdd vdd pch w=2u l=0.2u m=1
-X1 vn1 vrpoi gnd RPO_NEW
+MN1 vi3 vi3 gnd gnd nch w=4u l=0.2u m=1 $vi4
+MN2 vi3 vn1 vdd vdd pch w=0.5u l=5u m=1
+Mn3 vn1 vn1 vdd vdd pch w=2u l=1u m=1
+MN4 vn1 vn1 vn2 gnd nch w=1u l=1u m=1
+X1 vn2 vrpoi gnd RPO_NEW
 *vtest vm2 gnd 0.9v
 Vsup vdd gnd 1.8V
 Vthr vthr gnd 0.5V
 Vtau vtau gnd 0.25V
 Vrest vrest gnd 1.7V
 Vrf vrf gnd 0.35V 
-vi3 vi3 gnd sin 0.3 0.001 1K *1/300 noise is ok for spike
+*vi3 vi3 gnd sin 0.3 0.001 1K *1/300 noise is ok for spike
 I1 vdd vm1 pulse (0nA 10nA 50ns 0 0 0.3ms 1.13ms) *0.3ms stop
 Vrpoi vrpoi gnd 0.1v
 *Inoise vi2 gnd sin(0.001nA 10000)
